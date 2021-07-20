@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Custom404() {
   return (
@@ -22,12 +23,14 @@ export default function Custom404() {
             </h2>
             <div className='mt-8 flex justify-center'>
               <div className='inline-flex'>
-                <a
-                  href='/'
-                  className='inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-lg text-blue-700 bg-blue-100 hover:bg-blue-200'
-                >
-                  Return to Home
-                </a>
+                <Link href='/'>
+                  <a
+                    href='/'
+                    className='inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-lg text-blue-700 bg-blue-100 hover:bg-blue-200'
+                  >
+                    Return to Home
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
