@@ -14,13 +14,13 @@ export default function Home() {
           <div className='bg-white dark:bg-gray-800 shadow overflow-hidden rounded-lg'>
             <div className='px-4 py-5 sm:px-6 flex items-center justify-between'>
               <div className='flex items-center'>
-                <div className='w-16 h-16 rounded-lg mr-4 shadow-lg'>
-                  <Image
-                    src='/images/AgustinRujana.jpg'
-                    alt=''
-                    layout='fill'
-                  />
-                </div>
+                <Image
+                  className='rounded-lg mr-4 shadow-lg'
+                  src='/images/AgustinRujana.jpg'
+                  alt=''
+                  width={64}
+                  height={64}
+                />
                 <h3 className='text-lg leading-none font-medium text-blue-900 dark:text-white dark:text-white'>
                 Agustín Rujana
                 </h3>
