@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -29,14 +29,16 @@ export default function Home() {
                   <dd className='mt-1 text-sm text-gray-900 dark:text-white sm:mt-0 sm:col-span-2'>
                     <div className='space-x-6 md:order-2 flex items-center'>
                       {social.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className='text-blue-400 hover:text-blue-700 dark:text-white dark:hover:text-gray-300'
-                        >
-                          <span className='sr-only'>{item.name}</span>
-                          <item.icon className='h-6 w-6' aria-hidden='true' />
-                        </a>
+                        <Link href={item.href} key={item.name}>
+                          <a
+                            
+
+                            className='text-blue-400 hover:text-blue-700 dark:text-white dark:hover:text-gray-300'
+                          >
+                            <span className='sr-only'>{item.name}</span>
+                            <item.icon className='h-6 w-6' aria-hidden='true' />
+                          </a>
+                        </Link>
                       ))}
                     </div>
                   </dd>
