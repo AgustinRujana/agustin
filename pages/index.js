@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -29,14 +29,14 @@ export default function Home() {
                   <dd className='mt-1 text-sm text-gray-900 dark:text-white sm:mt-0 sm:col-span-2'>
                     <div className='space-x-6 md:order-2 flex items-center'>
                       {social.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className='text-blue-400 hover:text-blue-700 dark:text-white dark:hover:text-gray-300'
-                        >
-                          <span className='sr-only'>{item.name}</span>
-                          <item.icon className='h-6 w-6' aria-hidden='true' />
-                        </a>
+                        <Link href={item.href} key={item.name}>
+                          <a                      
+                            className='text-blue-400 hover:text-blue-700 dark:text-white dark:hover:text-gray-300'
+                          >
+                            <span className='sr-only'>{item.name}</span>
+                            <item.icon className='h-6 w-6' aria-hidden='true' />
+                          </a>
+                        </Link>
                       ))}
                     </div>
                   </dd>
@@ -165,12 +165,12 @@ const learning = [
     width: 100,
     docs: 'https://expressjs.com/en/4x/api.html',
   },
-]
+];
 
 const social = [
   {
     name: 'GitHub',
-    href: 'https://github.com/matiaskochlowski',
+    href: 'https://github.com/agustinrujana',
     icon: (props) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path
@@ -183,7 +183,7 @@ const social = [
   },
   {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/matias-kochlowski-62034679',
+    href: 'https://www.linkedin.com/in/agustinrujana/?originalSubdomain=ar',
     icon: (props) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path d='M4.2,7L4.2,7L4.2,7c1.4,0,2.3-1,2.3-2.2c0-1.3-0.9-2.2-2.2-2.2S2,3.5,2,4.8C2,6,2.9,7,4.2,7z M2,8.5h4.5v13H2V8.5z M22,13.2c0-2.6-2.1-4.8-4.8-4.8c-1.5,0-2.9,0.7-3.8,1.8V8.5H9v13h4.5V14l0,0c0-1.1,0.9-2,2-2s2,0.9,2,2v7.5H22C22,21.5,22,14,22,13.2z' />
@@ -192,7 +192,7 @@ const social = [
   },
   {
     name: 'Instagram',
-    href: 'https://instagram.com/matiaskochlowski',
+    href: 'https://instagram.com/agusrujana',
     icon: (props) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path
@@ -205,7 +205,7 @@ const social = [
   },
   {
     name: 'Twitter',
-    href: 'https://twitter.com/matikochlowski',
+    href: 'https://twitter.com/agusrujana',
     icon: (props) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path d='M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84' />
@@ -214,7 +214,7 @@ const social = [
   },
   {
     name: 'Facebook',
-    href: 'https://facebook.com/matiaskochlowski',
+    href: 'https://facebook.com/agusrujana',
     icon: (props) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path
