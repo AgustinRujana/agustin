@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Custom404() {
   return (
@@ -10,11 +11,13 @@ export default function Custom404() {
       <main className='bg-white overflow-hidden h-screen'>
         <div className='bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl'>
-                <img
-                  className='w-1/2 mx-auto'
+            <h2 className='w-1/2 mx-auto text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl'>
+                <Image
+                  className=''
                   src='/images/svg/error404.svg'
                   alt=''
+                  width={1500}
+                  height={1500}
                 />
             </h2>
             <div className='mt-8 flex justify-center'>

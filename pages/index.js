@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Image from 'next/image';
+
 
 export default function Home() {
   return (
@@ -12,13 +14,13 @@ export default function Home() {
           <div className='bg-white dark:bg-gray-800 shadow overflow-hidden rounded-lg'>
             <div className='px-4 py-5 sm:px-6 flex items-center justify-between'>
               <div className='flex items-center'>
-                <img
-                  className='h-16 w-16 rounded-lg mr-4 shadow-lg'
-                  src='/images/AgustinRujana.jpg'
-                  alt=''
-                  width={300}
-                  height={300}
-                />
+                <div className='w-16 h-16 rounded-lg mr-4 shadow-lg'>
+                  <Image
+                    src='/images/AgustinRujana.jpg'
+                    alt=''
+                    layout='fill'
+                  />
+                </div>
                 <h3 className='text-lg leading-none font-medium text-blue-900 dark:text-white dark:text-white'>
                 Agustín Rujana
                 </h3>
@@ -77,7 +79,7 @@ export default function Home() {
                     {techStack.map((e) => (
                       <div key={e.name} className='flex flex-col overflow-hidden'>
                         <div className='flex-1 py-1 mr-3'>
-                          <img
+                          <Image
                             className='h-10'
                             src={e.logo}
                             alt={e.name}
@@ -95,7 +97,7 @@ export default function Home() {
                     {learning.map((e) => (
                       <div key={e.name} className='flex flex-col overflow-hidden'>
                         <div className='flex-1 py-1 mr-3'>
-                          <img
+                          <Image
                             className='h-10'
                             src={e.logo}
                             alt={e.name}
