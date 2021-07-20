@@ -30,9 +30,7 @@ export default function Home() {
                     <div className='space-x-6 md:order-2 flex items-center'>
                       {social.map((item) => (
                         <Link href={item.href} key={item.name}>
-                          <a
-                            
-
+                          <a                      
                             className='text-blue-400 hover:text-blue-700 dark:text-white dark:hover:text-gray-300'
                           >
                             <span className='sr-only'>{item.name}</span>
